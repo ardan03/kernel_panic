@@ -14,6 +14,36 @@
   text-align: center;
 }
 
+/* Контейнер для формы и списка */
+#room__lobby__container {
+  display: flex; /* Устанавливаем горизонтальное расположение */
+  justify-content: center; /* Пространство между элементами */
+  align-items: flex-start; /* Выровнять по верхнему краю */
+  gap: 10px; /* Отступ между блоками */
+  width: 100%; /* Растянуть контейнер на всю ширину */
+  padding: 20px; /* Добавить внутренние отступы */
+}
+
+/* Список комнат */
+#rooms__list {
+  width: 20%; /* Ширина блока со списком */
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Легкий бордер */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень для визуального выделения */
+  color: #fff;
+  padding: 20px; /* Внутренний отступ */
+  max-height: 400px; /* Ограничение высоты (если нужно) */
+  overflow-y: auto; /* Скроллинг при большом списке */
+}
+
+/* Форма регистрации */
+#form__container {
+  width: 30%; /* Задаем ширину для формы */
+  max-width: 600px; /* Максимальная ширина */
+}
+
+
 body{
   display: flex;
   justify-content: center;
@@ -22,6 +52,34 @@ body{
   background:url('PhotoPhon.jpg') no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+/* Новый стиль для кнопок */
+button {
+  background-color: #03965e; /* Светло-серый фон */
+  color: white; /* Черный текст */
+  border: 1px solid #a9a9a9; /* Темно-серый бордер */
+  border-radius: 4px; /* Скругление углов */
+  padding: 10px 15px; /* Внутренние отступы */
+  cursor: pointer; /* Курсор при наведении */
+  transition: background-color 0.3s ease; /* Плавный переход фона при наведении */
+}
+
+
+
+
+
+
+.markers {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+.markers li {
+	display: block;
+	margin: 7px 0;
+	background: url(/marker.png) 0 4px no-repeat;
+	padding-left: 15px;
+	font-size: 14px;
 }
 
 
@@ -68,7 +126,7 @@ body{
 .form__field__wrapper button[type='submit'] {
   margin-top: 32px;
   cursor: pointer;
-  background-color: gray;
+  background-color: #03965e;
   border: none;
   color: #fff;
   font-size: 16px;

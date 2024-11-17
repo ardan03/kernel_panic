@@ -40,7 +40,7 @@ const renderRoomList = () => {
 
     rooms.forEach((room) => {
         const listItem = document.createElement('li');
-        listItem.textContent = room.name;
+        listItem.textContent = room.name + " ";
 
         const joinButton = document.createElement('button');
         joinButton.textContent = 'Присоединиться';
