@@ -45,6 +45,11 @@ const renderRoomList = () => {
         const joinButton = document.createElement('button');
         joinButton.textContent = 'Присоединиться';
         joinButton.addEventListener('click', () => {
+            // Установка имени пользователя в формате "Терминал + id"
+            const userName = `Терминал ${room.id}`;
+            sessionStorage.setItem('display_name', userName);
+
+            // Переход в комнату с id
             window.location = `room.html?room=${room.id}`;
         });
 
@@ -82,4 +87,3 @@ form.addEventListener('submit', (e) => {
     renderRoomList(); // Обновление списка комнат
     window.location = `room.html?room=${newRoom.id}`;
 });
-
