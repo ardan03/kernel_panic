@@ -20,10 +20,10 @@ form.addEventListener('submit', (e) => {
 
 // Статический список комнат с id и name
 const rooms = [
-    { id: 1, name: 'Room 1' },
-    { id: 2, name: 'Room 2' },
-    { id: 3, name: 'Room 3' },
-    { id: 4, name: 'Room 4' }
+    { id: 1, name: 'Терминал 1' },
+    { id: 2, name: 'Терминал 2' },
+    { id: 3, name: 'Терминал 3' },
+    { id: 4, name: 'Терминал 4' }
 ];
 
 // Контейнер для отображения комнат
@@ -79,7 +79,7 @@ form.addEventListener('submit', (e) => {
     
     // Добавление новой комнаты в список с уникальным id
     const newRoom = {
-        id: rooms.length + 1, // Уникальный id для новой комнаты
+        id: rooms. e.target.room.value, // Уникальный id для новой комнаты
         name: inviteCode
     };
     rooms.push(newRoom);
